@@ -11,7 +11,7 @@ class Beeramid
     (amount/price).to_i
   end
 
-  def self.calculate(amount, price=5)
+  def calculate
     if price <= 0
       return nil
     end

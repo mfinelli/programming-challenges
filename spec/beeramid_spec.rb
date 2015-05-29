@@ -65,32 +65,42 @@ describe Beeramid do
   describe '#calculate' do
 
     context 'with negative amount' do
+      b = Beeramid.new(amount: -1)
+
       it 'returns zero' do
-        expect(Beeramid.calculate(-1)).to eql(0)
+        expect(b.calculate).to eql(0)
       end
     end
 
     context 'with zero amount' do
+      b = Beeramid.new(amount: 0)
+
       it 'returns zero' do
-        expect(Beeramid.calculate(0)).to eql(0)
+        expect(b.calculate).to eql(0)
       end
     end
 
     context 'with negative price' do
+      b = Beeramid.new(price: -1)
+
       it 'returns nil' do
-        expect(Beeramid.calculate(1, -1)).to be_nil
+        expect(b.calculate).to be_nil
       end
     end
 
     context 'with zero price' do
+      b = Beeramid.new(price: 0)
+
       it 'returns nil' do
-        expect(Beeramid.calculate(1, 0)).to be_nil
+        expect(b.calculate).to be_nil
       end
     end
 
     context 'with amount less than price' do
+      b = Beeramid.new(amount: 1, price: 5)
+
       it 'returns zero' do
-        expect(Beeramid.calculate(1, 5)).to eql(0)
+        expect(b.calculate).to eql(0)
       end
     end
 
