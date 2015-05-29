@@ -63,7 +63,6 @@ describe Beeramid do
   end
 
   describe '#calculate' do
-
     context 'with negative amount' do
       b = Beeramid.new(amount: -1)
 
@@ -104,5 +103,61 @@ describe Beeramid do
       end
     end
 
+    context 'with one can' do
+      b = Beeramid.new(amount: 5)
+
+      it 'should make one level' do
+        expect(b.calculate).to eql(1)
+      end
+    end
+
+    context 'with three cans' do
+      b = Beeramid.new(amount: 15)
+
+      it 'should make two levels' do
+        expect(b.calculate).to eql(2)
+      end
+    end
+
+    context 'with six cans' do
+      b = Beeramid.new(amount: 30)
+
+      it 'should make three levels' do
+        expect(b.calculate).to eql(3)
+      end
+    end
+
+    context 'with ten cans' do
+      b = Beeramid.new
+
+      it 'should make four levels' do
+        expect(b.calculate).to eql(4)
+      end
+    end
+
+    context 'with seven cans' do
+      b = Beeramid.new(amount: 35)
+
+      it 'should make three levels' do
+        expect(b.calculate).to eql(3)
+      end
+    end
+
+    context 'with eight cans' do
+      b = Beeramid.new(amount: 40)
+
+      it 'should make three levels' do
+        expect(b.calculate).to eql(3)
+      end
+    end
+
+    context 'with one hundred cans' do
+      b = Beeramid.new(price: 1, amount: 100)
+
+      it 'should make thirteen levels' do
+        expect(b.calculate).to eql(13)
+      end
+    end
   end
+
 end

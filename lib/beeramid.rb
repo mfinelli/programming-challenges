@@ -19,6 +19,20 @@ class Beeramid
     if amount <= 0 or amount < price
       return 0
     end
+
+    cans_remaining = buy_beer
+    levels = 0
+
+    while cans_remaining > 0
+      if cans_remaining < levels + 1
+        break
+      else
+        levels += 1
+        cans_remaining -= levels
+      end
+    end
+
+    levels
   end
 
 end
