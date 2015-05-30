@@ -27,3 +27,9 @@ Dependencies
 * pry: run the challenges interactively: `bundle exec pry`
 * rspec: tests! `bundle exec rspec --color` (or to be a little fancier:
   `bundle exec rspec --color --format documentation`)
+
+License
+-------
+
+Licensed under the permissive MIT license. See the accompanying LICENSE file
+for more information.
