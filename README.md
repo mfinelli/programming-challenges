@@ -1,6 +1,8 @@
 Programming Challenges
 ======================
 
+[![Build Status](https://travis-ci.org/mfinelli/programming-challenges.svg?branch=master)](https://travis-ci.org/mfinelli/programming-challenges)
+
 Sample implementations of simple programming challenges to work on writing
 test cases.
 
