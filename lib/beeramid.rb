@@ -25,14 +25,12 @@ class Beeramid
 
     while cans_remaining > 0
       if cans_remaining < levels + 1
-        break
+        return levels
       else
         levels += 1
         cans_remaining -= levels
       end
     end
-
-    levels
   end
 
 end
