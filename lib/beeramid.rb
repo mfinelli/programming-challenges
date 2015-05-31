@@ -38,6 +38,10 @@ class Beeramid
         cans_remaining -= levels
       end
     end
+
+    # If we use all of the cans then the loop breaks, return the number of
+    # levels.
+    levels
   end
 
 end
