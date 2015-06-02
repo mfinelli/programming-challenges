@@ -8,6 +8,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    redcarpet (3.2.3)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -22,10 +23,13 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
     slop (3.6.0)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   pry
+  redcarpet
   rspec
+  yard

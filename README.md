@@ -29,6 +29,8 @@ Dependencies
 * pry: run the challenges interactively: `bundle exec pry`
 * rspec: tests! `bundle exec rspec --color` (or to be a little fancier:
   `bundle exec rspec --color --format documentation`)
+* yard: to generate documentation: `bundle exec yard`
+* redcarpet: dependency of yard to work with markdown
 
 License
 -------
