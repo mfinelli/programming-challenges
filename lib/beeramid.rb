@@ -1,7 +1,21 @@
+# Create a pyramid of beer cans!
+#
+# @author Mario Finelli
 class Beeramid
 
-  attr_reader :price, :amount
+  # @return [Float] How much money we have to spend on beer
+  attr_reader :amount
 
+  # @return [Float] The price of one beer
+  attr_reader :price
+
+  # Returns a new instance of Beeramid.
+  #
+  # @param [Hash] params The options to create the beeramid
+  # @option params [Fixnum, Float] :price The price of a beer
+  # @option params [Fixnum, Float] :amount How much money we have to spend
+  #
+  # @return [Beeramid] New instance of Beeramid
   def initialize(params={})
     @price = params.fetch(:price, 5.0).to_f
     @amount = params.fetch(:amount, 50.0).to_f
