@@ -7,10 +7,18 @@ class Beeramid
     @amount = params.fetch(:amount, 50.0).to_f
   end
 
+  # Returns the number of beers you can buy with the amount of money you have
+  # and the price per beer.
+  #
+  # @return [Fixnum] Number of beers that can be bought
   def buy_beer
     (amount/price).to_i
   end
 
+  # Calculate the number of levels of the pyramid that can be made with the
+  # amount of beer that you can buy.
+  #
+  # @return [Fixnum] Number of levels of the pyramid that can be made
   def calculate
     if price <= 0
       return nil
