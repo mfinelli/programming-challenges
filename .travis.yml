@@ -1,5 +1,7 @@
 language: ruby
 script:
   - bundle exec rspec --color --format documentation
+notifications:
+  email: false
 rvm:
   - 2.2.2
